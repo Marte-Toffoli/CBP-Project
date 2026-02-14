@@ -3,9 +3,9 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from scipy.stats import f_oneway
 
-file1 = pd.read_csv("C:\\Users\\Marte\\Desktop\\Biophysics\\hbonds\\hbonds_chimera2.dat", sep='\s+', names=["time", "num_hbonds"])
-file2 = pd.read_csv("C:\\Users\\Marte\\Desktop\\Biophysics\\hbonds\\hbonds_alpha2.dat", sep='\s+', names=["time", "num_hbonds"])
-file3 = pd.read_csv("C:\\Users\\Marte\\Desktop\\Biophysics\\hbonds\\hbonds_wt2.dat", sep='\s+', names=["time", "num_hbonds"])
+file1 = pd.read_csv("Path\\to\\hbonds_chimera.dat", sep='\s+', names=["time", "num_hbonds"])
+file2 = pd.read_csv("Path\\to\\hbonds_alpha.dat", sep='\s+', names=["time", "num_hbonds"])
+file3 = pd.read_csv("Path\\to\\hbonds_wt2.dat", sep='\s+', names=["time", "num_hbonds"])
 print(file1.head())
 
 
@@ -41,3 +41,4 @@ f_statistic, p_value = f_oneway(file1["num_hbonds"], file2["num_hbonds"])
 
 print(f"F-statistic: {f_statistic}")
 print(f"P-value: {p_value}")
+
